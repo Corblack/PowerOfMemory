@@ -1,0 +1,299 @@
+body {
+  background-color: rgb(8, 1, 31);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#main {
+  max-width: 1240px;
+  padding: 0 60px;
+  margin: auto;
+}
+
+.bloc-bienvenu {
+  display: flex;
+  flex-direction: column;
+  background-image: url(dossier/manettesimpliste.png);
+  background-repeat: no-repeat;
+  background-position: 70% 30px;
+  background-size: 225px;
+}
+
+.bloc-bienvenu .texte {
+  max-width: 50%;
+  margin-left: 60px;
+}
+
+#Commencer {
+  border-radius: 30px;
+  margin-left: -500px;
+  color: #f1f1f1;
+  background-color: orangered;
+  height: 40px;
+}
+
+.image img {
+  margin-right: -350px;
+  margin-top: -250px;
+  width: 300px;
+}
+
+.formulaire {
+  border: solid 1px;
+  border-top-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-right-style: initial;
+  border-radius: 10px;
+  border-color: rgb(248, 248, 248);
+  padding: 5px;
+  margin: auto;
+}
+
+.tableau {
+  display: flex;
+  margin: auto;
+}
+
+.tableau img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: auto;
+  margin-left: 60px;
+}
+
+.bloc-banniere {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: 60% 30px;
+  background-size: 225px;
+}
+
+.bloc-banniere .texte {
+  max-width: 50%;
+  margin: auto;
+}
+
+#paragraphe {
+  width: 400px;
+  margin-left: 145px;
+}
+
+.banniere img {
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-size: 200px;
+  background-image: url(dossier/be61ec5cdee17a4986b5e984701816a4cc2b0ee0.jpg);
+  height: auto;
+  margin: auto;
+}
+
+.bloc-stat {
+  display: block;
+  background-image: url(dossier/stat.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 220px 1fr;
+  grid-template-rows: auto auto;
+  gap: 28px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 180px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.card p {
+  margin: 5px 0 0;
+  font-size: 1em;
+}
+
+.bleu {
+  background: #4a90e2;
+}
+.blanc {
+  background: #fff;
+  color: #000;
+}
+.jaune {
+  background: #f5a623;
+}
+.rouge {
+  background: #d0021b;
+}
+.orange {
+  background: #d2691e;
+}
+
+.equipe123 {
+  display: flex;
+  margin: auto;
+}
+
+.equipe123 img {
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.equipe45 {
+  display: flex;
+  margin: auto;
+  margin-left: 33%;
+}
+
+.equipe45 img {
+  width: 240px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.white {
+  background-color: white;
+  border-radius: 11px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  color: black;
+}
+
+.white texte {
+  max-width: 50%;
+}
+.white h1 {
+  font-size: 30px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.white p {
+  margin: 0;
+  font-size: 15px;
+  color: #3b3b3b;
+}
+
+#valider {
+  border-radius: 11px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.email-form {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.email-form input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  width: 300px;
+}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  color: #000;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

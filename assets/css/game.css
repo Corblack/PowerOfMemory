@@ -1,0 +1,135 @@
+body {
+  background-color: rgb(8, 1, 31);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 640px;
+  margin: auto;
+}
+
+.grille img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px;
+}
+
+.rouleau {
+  gap: 60px;
+  margin: auto;
+}
+
+select {
+  width: 180px;
+  padding: 5px;
+  font-size: 8px;
+  border-radius: 7px;
+}
+
+#generer {
+  border-radius: 30px;
+  color: #f1f1f1;
+  background-color: orangered;
+  height: 40px;
+}
+
+.bloc-banniere .texte {
+  max-width: 50%;
+  margin: auto;
+}
+
+#paragraphe {
+  width: 400px;
+  margin-left: 600px;
+}
+
+#Jouer {
+  margin-left: -960px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+}
+
+#xbox {
+  height: 300px;
+  margin-top: -400px;
+  margin-left: 600px;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  color: black;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

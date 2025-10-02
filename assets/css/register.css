@@ -1,0 +1,125 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Conteneur global */
+.all {
+    display: flex;
+    justify-content: center;
+    /* centre les deux blocs */
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    gap: 60px;
+    /* espace réglable entre les deux blocs */
+}
+
+/* Bloc login */
+.container {
+    flex: 0 1 400px;
+    /* largeur fixe mais flexible */
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: auto;
+
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-connexion {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #162D3A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#ou {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#co-google {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+#google {
+    height: 20px;
+}
+
+#create2 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Bloc image */
+.chatgpt {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat {
+    max-width: 380px;
+    /* limite la largeur pour pas qu’elle déborde */
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+#mdpzap {
+    display: block;
+    text-decoration: none;
+    text-align: end;
+}
+
+
+#create {
+    text-decoration: none;
+}
+
+
+
+
+/*Polices*/
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../font/Poppins-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeux</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/game.css" />
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+  </head>
+  <body>
+    <header>
+        <div class="header-container">
+            <p><img src="assets/images/logo.png" alt="logo"></p>
+            <nav class="menu">
+                <a href="index.html">Accueil</a>
+                <a href="scores.html">Scores</a>
+                <a href="account.html" id="moncompte">Profil</a>
+                <a href="contact.html" id="contact">Nous contacter</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Titre du Jeu -->
+
+    <div class="blocmemory">
+      <div class="texte"></div>
+      <h1>The Power Of Memory</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        dolor nobis magni ratione error, aliquam sit mollitia magnam temporibus
+        laborum placeat veritatis ea repellat reprehenderit ex ipsa porro facere
+        neque?
+      </p>
+    </div>
+
+    <!-- menus deroulant et bouton de generation -->
+
+    <div class="rouleau">
+      <select name="Taille du format" id="menu1">
+        <option value="">Taille de la grille</option>
+        <option value="option1">4x4</option>
+        <option value="option2">6x6</option>
+        <option value="option3">10x10</option>
+      </select>
+
+      <select name="Theme" id="menu2">
+        <option value="">Theme</option>
+        <option value="option1">Jeux Videos</option>
+        <option value="option2">X</option>
+        <option value="option3">Y</option>
+      </select>
+
+      <button id="generer">Générer une grille</button>
+    </div>
+
+    <!-- FORMAT 4X4 -->
+    <div class="grille">
+      <img src="assets/images/memory card.jpg" alt="image 1" />
+      <img src="assets/images/memory card.jpg" alt="image 2" />
+      <img src="assets/images/memory card.jpg" alt="image 3" />
+      <img src="assets/images/memory card.jpg" alt="image 4" />
+      <img src="assets/images/memory card.jpg" alt="image 5" />
+      <img src="assets/images/memory card.jpg" alt="image 6" />
+      <img src="assets/images/memory card.jpg" alt="image 7" />
+      <img src="assets/images/memory card.jpg" alt="image 8" />
+      <img src="assets/images/memory card.jpg" alt="image 9" />
+      <img src="assets/images/memory card.jpg" alt="image 10" />
+      <img src="assets/images/memory card.jpg" alt="image 11" />
+      <img src="assets/images/memory card.jpg" alt="image 12" />
+      <img src="assets/images/memory card.jpg" alt="image 13" />
+      <img src="assets/images/memory card.jpg" alt="image 14" />
+      <img src="assets/images/memory card.jpg" alt="image 15" />
+      <img src="assets/images/memory card.jpg" alt="image 16" />
+    </div>
+
+    <!-- paragraphe -->
+    <div class="bloc-banniere">
+      <div id="paragraphe">
+        <h1>commodi porro iste incidunt.</h1>
+      </div>
+      <div id="paragraphe">
+        <p1
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus modi
+          aliquam consequuntur totam ea sunt fuga quidem et labore.Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Natus modi aliquam
+          consequuntur totam ea sunt fuga quidem et labore.</p1
+        >
+      </div>
+    </div>
+    <div>
+      <button id="Jouer">Jouer</button>
+    </div>
+
+    <div>
+      <img src="assets/images/xbox.jpg" id="xbox" />
+    </div>
+    <h2></h2>
+    <p></p>
+    <p>
+      
+    </p>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+      <form action="#" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Power of memory</b></label>
+        <textarea placeholder="Est en train d'écrire..." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer1">
+                <p> <img src="assets/images/logo.png" alt="logo" id="logo"></p>
+                <p>Notre équipe est à votre écoute pour toute question<br> ou suggestion. Nous mettons tout en œuvre pour<br> vous aider rapidement.</p>
+            </div>
+            <div class="footer2">
+                <h4>menu</h4>
+                <a href="index.html">Accueil</a>
+                <a href="scores.html">Scores</a>
+                <a href="contact.html">contact</a>
+            </div>
+            <div class="footer3">
+                <h4>Contactez-nous</h4>
+                <p>+33 6 01 02 03 04</p>
+                <p>23 rue de Paris<br>75002 Paris</p>
+                <p>contact@web.com</p>
+            </div>
+            <p><img src="assets/images/Group 12.png" alt="reseaux" id="reseaux"></p>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>© 2025 The Power of Memory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
