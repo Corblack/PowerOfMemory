@@ -14,7 +14,7 @@ body {
 .bloc-bienvenu {
   display: flex;
   flex-direction: column;
-  background-image: url(dossier/manettesimpliste.png);
+  background-image: url(../images/manettesimpliste.png);
   background-repeat: no-repeat;
   background-position: 70% 30px;
   background-size: 225px;
@@ -87,14 +87,14 @@ body {
   display: flex;
   flex-direction: column;
   background-size: 200px;
-  background-image: url(dossier/be61ec5cdee17a4986b5e984701816a4cc2b0ee0.jpg);
+  background-image: url(../images/be61ec5cdee17a4986b5e984701816a4cc2b0ee0.jpg);
   height: auto;
   margin: auto;
 }
 
 .bloc-stat {
   display: block;
-  background-image: url(dossier/stat.jpg);
+  background-image: url(../images/stat.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
