@@ -2,8 +2,8 @@ DROP DATABASE IF EXISTS PowerOfMemory;
 CREATE DATABASE PowerOfMemory CHARACTER SET utf8mb4;
 USE PowerOfMemory;
 
-/* Story 1*/
--- créer une base de données MySQL ainsi que des tables --
+/* Story 1 */
+-- create a MySQL database and its tables --
 DROP TABLE IF EXISTS Utilisateur;
 CREATE TABLE Utilisateur(
     Id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -39,10 +39,8 @@ CREATE TABLE Message(
     CreatedAt DATETIME NOT NULL
 );  
 
-
-
-/* Story 2*/
---  créer un jeu de données pour l’ensemble de mes tables --
+/* Story 2 */
+-- create a dataset for all tables --
 INSERT INTO Utilisateur (Email, Password, Username, CreatedAt, UpdatedAt)
 VALUES
 ('alice.dupont@example.com', 'hash1', 'Alice', NOW(), NOW()),
@@ -50,7 +48,6 @@ VALUES
 ('caroline.lefevre@example.com', 'hash3', 'Caroline', NOW(), NOW()),
 ('david.moreau@example.com', 'hash4', 'David', NOW(), NOW()),
 ('emma.girard@example.com', 'hash5', 'Emma', NOW(), NOW());
-
 
 INSERT INTO Message (GameId, UserId, Message, CreatedAt)
 VALUES
@@ -75,84 +72,77 @@ VALUES
 (4, 4, 'Message test 19', NOW()),
 (4, 5, 'Message test 20', NOW());
 
-
-
-
-
 INSERT INTO Score (UserId, GameId, Difficulty, Score, CreatedAt)
 VALUES 
 (1, 1, "1", 100, NOW()),
 (2, 1, "2", 200, NOW()),
 (3, 1, "3", 300, NOW());
 
-
 INSERT INTO Game (Name)
 VALUES
 ("Power of Memory");
 
-
-/* Story 3*/
---  écrire la requête SQL qui permettra d’enregistrer un utilisateur dans la table utilisateurs --
+/* Story 3 */
+-- SQL query to register a user in the users table --
 INSERT INTO Utilisateur (Email, Password, Username, CreatedAt)
 VALUES
 ('test@gmail.com', 'hashTest', 'testUser', NOW());
 
-/* Story 4*/
---  écrire les requêtes SQL permettant de modifier le mot de passe et l’adresse email d’un utilisateur --
+/* Story 4 */
+-- SQL queries to update a user's password and email --
 
---modifier le mdp si l'id correspond--
+-- update password if the id matches --
 UPDATE utilisateur
-SET Password = 'nouveauMotDePasseHache'
+SET Password = 'newHashedPassword'
 WHERE id = 1;
 
---modifier si mail le l'id correspond --
+-- update email if the id matches --
 UPDATE utilisateur
-SET email = 'nouvelEmail@example.com'
+SET email = 'newEmail@example.com'
 WHERE id = 1;
 
-/* Story 5*/
---  écrire la requête SQL permettant de s’identifier sur le site -- 
+/* Story 5 */
+-- SQL query to log in a user --
 SELECT id, email, Username
 FROM utilisateur 
 WHERE email = 'sacha@example.com'
-AND Password = 'motDeeeePasseHache';
+AND Password = 'hashedPassword';
 
+/* Story 6 */
+-- SQL query to display users' scores --
+SELECT Game.Name, Utilisateur.Username, Score.Difficulty, Score.Score, Score.CreatedAt
+FROM Score 
+INNER JOIN Utilisateur ON Score.UserId = Utilisateur.Id
+INNER JOIN Game ON Score.GameId = Game.Id
+ORDER BY Name ASC,
+         Difficulty DESC,
+         Score ASC;
 
-/* Story 6*/
---  écrire la requête SQL permettant d’afficher le score des utilisateurs --
-SELECT Game.Name,Utilisateur.Username,Score.Difficulty,Score.Score,Score.CreatedAt
-FROM Score INNER JOIN Utilisateur ON score.UserId= Utilisateur.Id
-INNER JOIN Game ON Score.GameId=Game.Id
-ORDER BY name ASC,
-difficulty DESC,
-Score ASC;
-
-/* Story 7*/
---écrire la requête SQL permettant de rechercher des scores à partir du pseudo d’un utilisateur --
-
-SELECT game.Name, Username, Difficulty, Score, Score.CreatedAt
-FROM Score JOIN utilisateur ON score.UserId = utilisateur.Id
-JOIN Game ON Game.Id = score.GameId
+/* Story 7 */
+-- SQL query to search for scores by a user's username --
+SELECT Game.Name, Username, Difficulty, Score, Score.CreatedAt
+FROM Score 
+JOIN Utilisateur ON Score.UserId = Utilisateur.Id
+JOIN Game ON Game.Id = Score.GameId
 WHERE Username LIKE '%%'
 ORDER BY Difficulty, Score;
 
-/* Story 8*/
--- écrire les 2 requêtes SQL permettant d’enregistrer le score d’un joueur qui a terminé sa partie --
-
+/* Story 8 */
+-- SQL queries to record a player's score after finishing a game --
 INSERT INTO Score (UserId, GameId, Difficulty, Score, CreatedAt)
 VALUES (1, 1, "2", 400, NOW());
 
-
 UPDATE Score 
-SET Score = 500,difficulty=3,CreatedAt=NOW()
-WHERE id=3;
+SET Score = 500, Difficulty = 3, CreatedAt = NOW()
+WHERE id = 3;
 
-/* Story 9*/
---  écrire la requête SQL permettant d’enregistrer un message sur le chat d’une partie --
-INSERT  INTO Message ( GameId, UserId, Message, CreatedAt)
+/* Story 9 */
+-- SQL query to save a message in a game's chat --
+INSERT INTO Message (GameId, UserId, Message, CreatedAt)
 VALUES (1, 1, 'Message test 1', NOW());
-/* Story 10*/
---  écrire la requête SQL permettant d’afficher la discussion du chat général --
+
+/* Story 10 */
+-- SQL query to display the general chat conversation --
 SELECT m.Message, m.UserId, m.CreatedAt,
        IF(m.UserId = u.Id, 1, 0) AS isSender
 FROM `Message` AS m
@@ -163,9 +153,8 @@ ORDER BY m.CreatedAt ASC;
 INSERT INTO `Message` (GameId, UserId, Message, CreatedAt)
 VALUES (1, 1, 'Message test 1', NOW());
 
-
-/* story 11 */
---  créer une messagerie privée sur mon site internet --
+/* Story 11 */
+-- create a private messaging system on my website --
 DROP TABLE IF EXISTS MessageriePrivee;
 CREATE TABLE MessageriePrivee (
     Id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -179,50 +168,48 @@ CREATE TABLE MessageriePrivee (
     PRIMARY KEY (Id)
 );
 
-
-
-/* story 12*/
---  ajouter des données de test et gérer la création, la modification et la suppression d’un message --
+/* Story 12 */
+-- add test data and handle creation, modification, and deletion of a message --
 INSERT INTO MessageriePrivee (UserSenderId, UserReceiverId, Msg, IsRead, ReadAt, CreatedAt) 
 VALUES
-  (1, 2, 'Yo, t’es dispo ce soir ?', 1, NOW(), NOW()),
-  (2, 1, 'Oui tranquille, tu veux faire quoi ?', 1, NOW(), NOW()),
-  (1, 3, 'T’as vu la nouvelle map ?', 0, NULL, NOW()),
-  (3, 1, 'Non pas encore, elle est bien ?', 0, NULL, NOW()),
-  (2, 3, 'J’ai enfin fini la mission !', 1, NOW(), NOW()),
-  (3, 2, 'Sérieux ? GG à toi !', 0, NULL, NOW()),
-  (1, 2, 'On s’entraîne demain ?', 0, NULL, NOW()),
-  (2, 1, 'Ouais, vers 21h ça te va ?', 1, NOW(), NOW()),
-  (3, 1, 'Je galère avec le boss final.', 1, NOW(), NOW()),
-  (1, 3, 'Je peux t’aider si tu veux.', 0, NULL, NOW()),
-  (2, 3, 'Le serveur est down encore ?', 0, NULL, NOW()),
-  (3, 2, 'Ouais, maintenance jusqu’à minuit.', 1, NOW(), NOW()),
-  (1, 2, 'T’as essayé le nouveau perso ?', 0, NULL, NOW()),
-  (2, 1, 'Oui, il est trop fort en PvP.', 1, NOW(), NOW()),
-  (3, 1, 'On lance une partie classée ?', 0, NULL, NOW()),
-  (1, 3, 'Je suis chaud, go maintenant !', 0, NULL, NOW()),
-  (2, 3, 'Je rejoins le vocal dans 5 min.', 1, NOW(), NOW()),
-  (3, 2, 'Ok, j’y serai aussi.', 0, NULL, NOW()),
-  (1, 2, 'Bonne game à toi !', 1, NOW(), NOW()),
-  (2, 1, 'Merci bro, amuse-toi bien !', 0, NULL, NOW());
+  (1, 2, 'Yo, are you available tonight?', 1, NOW(), NOW()),
+  (2, 1, 'Yes, all good, what do you want to do?', 1, NOW(), NOW()),
+  (1, 3, 'Did you see the new map?', 0, NULL, NOW()),
+  (3, 1, 'Not yet, is it good?', 0, NULL, NOW()),
+  (2, 3, 'I finally finished the mission!', 1, NOW(), NOW()),
+  (3, 2, 'Seriously? GG!', 0, NULL, NOW()),
+  (1, 2, 'Training tomorrow?', 0, NULL, NOW()),
+  (2, 1, 'Yeah, around 9pm works?', 1, NOW(), NOW()),
+  (3, 1, 'Struggling with the final boss.', 1, NOW(), NOW()),
+  (1, 3, 'I can help if you want.', 0, NULL, NOW()),
+  (2, 3, 'Is the server down again?', 0, NULL, NOW()),
+  (3, 2, 'Yeah, maintenance until midnight.', 1, NOW(), NOW()),
+  (1, 2, 'Have you tried the new character?', 0, NULL, NOW()),
+  (2, 1, 'Yes, he is really strong in PvP.', 1, NOW(), NOW()),
+  (3, 1, 'Shall we start a ranked game?', 0, NULL, NOW()),
+  (1, 3, 'I’m ready, let’s go now!', 0, NULL, NOW()),
+  (2, 3, 'Joining voice in 5 min.', 1, NOW(), NOW()),
+  (3, 2, 'Ok, I’ll be there too.', 0, NULL, NOW()),
+  (1, 2, 'Good game to you!', 1, NOW(), NOW()),
+  (2, 1, 'Thanks bro, have fun!', 0, NULL, NOW());
 
-
-  -- Insertion des Message supplémentaires
+-- Insert additional messages
 INSERT INTO MessageriePrivee (UserSenderId, UserReceiverId, Msg, IsRead, ReadAt, CreatedAt)
 VALUES
-  (4, 5, 'ca joue ?', 1, NOW(), NOW()),
-  (5, 4, 'vsy', 1, NOW(), NOW());
+  (4, 5, 'Hey, what’s up?', 1, NOW(), NOW()),
+  (5, 4, 'Going good', 1, NOW(), NOW());
 
--- Mise à jour d’un message
+-- Update a message
 UPDATE MessageriePrivee 
-SET Msg = 'XD ON LANCE'
+SET Msg = 'XD LET’S GO'
 WHERE id = 21;
--- supression d'un message --
-DELETE FROM MessageriePrivee
-WHERE id=21;
 
-/* story 13 */
--- écrire la requête SQL permettant d’afficher les différentes conversations entre utilisateurs --
+-- Delete a message --
+DELETE FROM MessageriePrivee
+WHERE id = 21;
+
+/* Story 13 */
+-- SQL query to display different conversations between users --
 SELECT 
     UtilisateurExpediteur.Username AS sender,
     UtilisateurRecepteur.Username AS receiver,
@@ -240,16 +227,14 @@ JOIN (
         MAX(CreatedAt) AS lastMessageDate
     FROM MessageriePrivee
     GROUP BY userA, userB
-) AS DernierMessage
-ON LEAST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = DernierMessage.userA
-AND GREATEST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = DernierMessage.userB
-AND MessageriePrivee.CreatedAt = DernierMessage.lastMessageDate
+) AS LastMessage
+ON LEAST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = LastMessage.userA
+AND GREATEST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = LastMessage.userB
+AND MessageriePrivee.CreatedAt = LastMessage.lastMessageDate
 ORDER BY MessageriePrivee.CreatedAt DESC;
 
-
-
-/* story 14 */
---  écrire la requête SQL permettant d’afficher un échange entre deux utilisateurs --
+/* Story 14 */
+-- SQL query to display an exchange between two users --
 SELECT 
     Expediteur.Username AS Expediteur,
     Recepteur.Username AS Recepteur,
@@ -284,12 +269,8 @@ WHERE (MessagePrive.UserSenderId = 1 AND MessagePrive.UserReceiverId = 2)
    OR (MessagePrive.UserSenderId = 2 AND MessagePrive.UserReceiverId = 1)
 ORDER BY MessagePrive.CreatedAt ASC;
 
-
-/* story 15 */
---  écrire la requête SQL qui permettra d’afficher toutes les stats de tous les joueur en fonction d’une année --
-
-
-
+/* Story 15 */
+-- SQL query to display all stats for all players for a specific year --
 
 /* Story 16 */
--- écrire la requête SQL qui permettra d’afficher les stats d’un seul joueur --
+-- SQL query to display stats for a single player --
