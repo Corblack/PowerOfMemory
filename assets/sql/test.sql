@@ -232,7 +232,7 @@ ON LEAST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = LastM
 AND GREATEST(MessageriePrivee.UserSenderId, MessageriePrivee.UserReceiverId) = LastMessage.userB
 AND MessageriePrivee.CreatedAt = LastMessage.lastMessageDate
 ORDER BY MessageriePrivee.CreatedAt DESC;
-
+s
 /* Story 14 */
 -- SQL query to display an exchange between two users --
 SELECT 
