@@ -86,13 +86,7 @@ body {
 /*          TABLEAU              */
 /* ============================= */
 
-#filter {
-    display: flex;
 
-    justify-content: space-around;
-    margin-top: 40px;
-    gap: 10px;
-}
 
 
 

@@ -16,7 +16,7 @@
         <div class="texte"> <h1>Scores</h1>
             <p>Voici la listes des meilleurs joueurs, vient donc battre tous ces records!</p>
         </div>
-        <div class=" filter">
+        <div class="filter">
             <form method="post" action="scores.php">
                 <div class="filtre nom">
                     <label for="pseudo">pseudo:</label>
