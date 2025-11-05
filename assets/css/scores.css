@@ -85,6 +85,17 @@ body {
 /* ============================= */
 /*          TABLEAU              */
 /* ============================= */
+
+#filter {
+    display: flex;
+
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+
+
 /* Coins arrondis sur le corps du tableau */
 tbody tr td:first-child {
   border-top-left-radius: 16px;

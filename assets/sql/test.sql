@@ -47,7 +47,10 @@ VALUES
 ('bob.martin@example.com', 'hash2', 'Bob', NOW(), NOW()),
 ('caroline.lefevre@example.com', 'hash3', 'Caroline', NOW(), NOW()),
 ('david.moreau@example.com', 'hash4', 'David', NOW(), NOW()),
-('emma.girard@example.com', 'hash5', 'Emma', NOW(), NOW());
+('emma.girard@example.com', 'hash5', 'Emma', NOW(), NOW()),
+('francois.leroy@example.com', 'hash6', 'François', NOW(), NOW()),
+('georges.petit@example.com', 'hash7', 'Georges', NOW(), NOW()),
+('helene.roche@example.com', 'hash8', 'Hélène', NOW(), NOW());
 
 INSERT INTO Message (GameId, UserId, Message, CreatedAt)
 VALUES
@@ -74,9 +77,16 @@ VALUES
 
 INSERT INTO Score (UserId, GameId, Difficulty, Score, CreatedAt)
 VALUES 
-(1, 1, "1", 100, NOW()),
-(2, 1, "2", 200, NOW()),
-(3, 1, "3", 300, NOW());
+(1, 1, '1', 120, NOW()),
+(2, 1, '2', 230, NOW()),
+(3, 1, '3', 340, NOW()),
+(4, 1, '1', 150, NOW()),
+(5, 1, '2', 260, NOW()),
+(6, 1, '3', 310, NOW()),
+(7, 1, '1', 180, NOW()),
+(8, 1, '2', 295, NOW()),
+(1, 1, '3', 420, NOW()),
+(2, 1, '1', 190, NOW());
 
 INSERT INTO Game (Name)
 VALUES

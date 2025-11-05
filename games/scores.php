@@ -46,109 +46,40 @@
             </thead>
             
                 <tbody>
+                    
                 <?php
-                while ($score = $requete_scores->fetch(PDO::FETCH_ASSOC)) {
-             
-                }
+                $rang = 1;
+                include $_SERVER['DOCUMENT_ROOT'].'/ProjetFlash/utils/database.php';
+                include $_SERVER['DOCUMENT_ROOT'].'/ProjetFlash/utils/common.php';
+                // 1. On OUVRE la boucle en PHP
+                while ($score = $requete_scores->fetch(PDO::FETCH_ASSOC)) : 
                 ?>
-                <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>John Doe</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m38</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
-                            <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>Joueur 2</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m39</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
-                            <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>Joueur 3</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m42</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
-                            <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>Joueur 4</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m45</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
-                            <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>Joueur 5</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m48</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
-                            <tr>
-                    <td>1</td> 
-                    
-                    <td class="game-cell"> 
-                        <img src="assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
-                        <span>Power Of Memory</span>
-                    </td>
-                    
-                    <td>Joueur 6</td> 
-                    
-                    <td>Difficile</td>
-                    
-                    <td>1m50</td>
-                    
-                    <td>29/09/25</td>
-                </tr>
 
-                
+                    <tr>
+                        <td><?php echo $rang ?></td> 
+
+                        <td class="game-cell"> 
+                            
+                            <img src="/ProjetFlash/assets/images/IMG_8409.jpg" alt="Icône du jeu" class="game-icon">
+                            
+                            <span>
+                                <?php echo $score['Name']; ?>
+                            </span>
+                        </td>
+                        
+                        <td><?php echo $score['Username']; ?></td>
+                        <td><?php echo $score['Difficulty']; ?></td>
+                        <td><?php echo $score['Score']; ?></td>
+                        
+                        <td><?php echo $score['CreatedAt']; ?></td>
+                    </tr>
+                    
+
+                <?php
+                if ($rang == 5) break;
+                $rang++;
+                endwhile; 
+                ?>
 
             </tbody>
                 
@@ -167,9 +98,9 @@
         <button id="btnjouer">Jouer</button>
     </div>
     
-    <img src="asset/image/e77e3023-2610-44e4-8a36-dc4f92b357b4.png" alt="Manette de jeu" id="manette-img">
+    <img src="/ProjetFlash/assets/images/e77e3023-2610-44e4-8a36-dc4f92b357b4.png" alt="Manette de jeu" id="manette-img">
 </div>
-    <?php include '../partials/footer.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/ProjetFlash/partials/footer.php'; ?>
 
     </main>
 

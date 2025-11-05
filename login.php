@@ -41,7 +41,7 @@
                 <p id="ou">ou</p>
 
                 <button id="co-google">
-                    <img id="google" src="assets/images/google.png" alt="Google">
+                    <img id="google" src="/ProjetFlash/assets/images/google.png" alt="Google">
                     Se connecter à Google
                 </button>
 
@@ -53,7 +53,7 @@
 
         <!-- Bloc image -->
         <div class="chatgpt">
-            <img id="chat" src="assets/images/e77e3023-2610-44e4-8a36-dc4f92b357b4.png" alt="Logo ChatGPT">
+            <img id="chat" src="/ProjetFlash/assets/images/e77e3023-2610-44e4-8a36-dc4f92b357b4.png" alt="Logo ChatGPT">
         </div>
 
 

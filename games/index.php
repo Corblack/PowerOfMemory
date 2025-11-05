@@ -45,22 +45,22 @@
 
     <!-- FORMAT 4X4 -->
     <div class="grille">
-      <img src="assets/images/memory card.jpg" alt="image 1" />
-      <img src="assets/images/memory card.jpg" alt="image 2" />
-      <img src="assets/images/memory card.jpg" alt="image 3" />
-      <img src="assets/images/memory card.jpg" alt="image 4" />
-      <img src="assets/images/memory card.jpg" alt="image 5" />
-      <img src="assets/images/memory card.jpg" alt="image 6" />
-      <img src="assets/images/memory card.jpg" alt="image 7" />
-      <img src="assets/images/memory card.jpg" alt="image 8" />
-      <img src="assets/images/memory card.jpg" alt="image 9" />
-      <img src="assets/images/memory card.jpg" alt="image 10" />
-      <img src="assets/images/memory card.jpg" alt="image 11" />
-      <img src="assets/images/memory card.jpg" alt="image 12" />
-      <img src="assets/images/memory card.jpg" alt="image 13" />
-      <img src="assets/images/memory card.jpg" alt="image 14" />
-      <img src="assets/images/memory card.jpg" alt="image 15" />
-      <img src="assets/images/memory card.jpg" alt="image 16" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 1" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 2" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 3" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 4" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 5" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 6" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 7" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 8" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 9" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 10" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 11" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 12" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 13" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 14" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 15" />
+      <img src="/ProjetFlash/assets/images/memory card.jpg" alt="image 16" />
     </div>
 
     <!-- paragraphe -->
@@ -83,7 +83,7 @@
     </div>
 
     <div>
-      <img src="assets/images/xbox.jpg" id="xbox" />
+      <img src="/ProjetFlash/assets/images/xbox.jpg" id="xbox" />
     </div>
     <h2></h2>
     <p></p>

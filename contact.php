@@ -18,22 +18,22 @@
     </div>
 
     <p>
-        <img src="assets/images/Map.png" alt="map" id="map">
+        <img src="/ProjetFlash/assets/images/Map.png" alt="map" id="map">
     </p>
 
     <div class="infos">
         <section>
             <p>Suivez-nous</p>
-            <p><img src="assets/images/Group 12.png" alt="reseaux"></p>
+            <p><img src="/ProjetFlash/assets/images/Group 12.png" alt="reseaux"></p>
         </section>
         <hr>
         <section class="infos-idk">
-            <p> <img src="assets/images/phone 1.png" alt="tel"></p>
+            <p> <img src="/ProjetFlash/assets/images/phone 1.png" alt="tel"></p>
             <p> +33 6 01 02 03 04</p>
         </section>
         <hr>
         <section class="infos-idk">
-            <p> <img src="assets/images/gps 1.png" alt="gps"></p>
+            <p> <img src="/ProjetFlash/assets/images/gps 1.png" alt="gps"></p>
             <p>23 rue de Paris<br>75002 Paris</p>
         </section>
 

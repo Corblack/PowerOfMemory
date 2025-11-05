@@ -36,7 +36,7 @@
             <figure>
               <a href="game.php" target="_blank">
                 <img
-                  src="assets/images/5e3cba2fbfa61b5f20863c65578cd03e1ab0a523.jpg"
+                  src="/ProjetFlash/assets/images/5e3cba2fbfa61b5f20863c65578cd03e1ab0a523.jpg"
                   alt="Jeux 1"
                 />
               </a>
@@ -46,14 +46,14 @@
 
           <div>
             <figure>
-              <img src="assets/images/xbox.jpg" alt="Jeux 2" />
+              <img src="/ProjetFlash/assets/images/xbox.jpg" alt="Jeux 2" />
             </figure>
             <p>Jeux 2</p>
           </div>
 
           <div>
             <figure>
-              <img src="assets/images/xbox.jpg" alt="Jeux 3" />
+              <img src="/ProjetFlash/assets/images/xbox.jpg" alt="Jeux 3" />
             </figure>
             <p>Jeux 3</p>
           </div>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="banniere">
-        <img src="assets/images/be61ec5cdee17a4986b5e984701816a4cc2b0ee0.jpg" />
+        <img src="/ProjetFlash/assets/images/be61ec5cdee17a4986b5e984701816a4cc2b0ee0.jpg" />
       </div>
       <br /><br />
 
@@ -130,21 +130,21 @@
       <div class="equipe123">
         <div>
           <figure>
-            <img src="assets/images/Didier.png" alt="Didier1" />
+            <img src="/ProjetFlash/assets/images/Didier.png" alt="Didier1" />
           </figure>
           <p>Member #1</p>
         </div>
 
         <div>
           <figure>
-            <img src="assets/images/Didier.png" alt="Didier2" />
+            <img src="/ProjetFlash/assets/images/Didier.png" alt="Didier2" />
           </figure>
           <p>Member #2</p>
         </div>
 
         <div>
           <figure>
-            <img src="assets/images/Didier.png" alt="Didier3" />
+            <img src="/ProjetFlash/assets/images/Didier.png" alt="Didier3" />
           </figure>
           <p>Member #3</p>
         </div>
@@ -154,14 +154,14 @@
     <div class="equipe45">
       <div>
         <figure>
-          <img src="assets/images/Didier.png" id="Didier4" />
+          <img src="/ProjetFlash/assets/images/Didier.png" id="Didier4" />
         </figure>
         <p>Member #4</p>
       </div>
 
       <div>
         <figure>
-          <img src="assets/images/Didier.png" id="Didier5" />
+          <img src="/ProjetFlash/assets/images/Didier.png" id="Didier5" />
         </figure>
         <p>Member #5</p>
       </div>
