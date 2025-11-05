@@ -2,9 +2,7 @@
 
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The power of memory</title>
+  <title>Inscription</title>
   <link rel="stylesheet" href="assets/css/register.css">
 </head>
 <body>
@@ -21,7 +19,7 @@
     </p>
   </header>
 
-  <form id="auth-form" action="login.html" method="get">
+  <form id="auth-form" action="login.php" method="get">
     <div class="form-group">
       <label for="email">Email</label>
       <input id="email" name="email" type="email" placeholder="exemple@gmail.com" required autocomplete="email">
@@ -48,7 +46,7 @@
     </button>
 
     <p id="create2">
-     Déjà un compte ? <a href="login.html" id="create">Je me connecte</a>
+     Déjà un compte ? <a href="login.php" id="create">Je me connecte</a>
     </p>
   </form>
 </div>

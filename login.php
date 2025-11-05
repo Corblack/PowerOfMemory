@@ -3,9 +3,7 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The power of memory</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
@@ -23,7 +21,7 @@
                 </p>
             </header>
 
-            <form id="auth-form" action="login.html" method="get">
+            <form id="auth-form" action="login.php" method="get">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" name="email" type="email" placeholder="exemple@gmail.com" required
@@ -36,7 +34,7 @@
                         autocomplete="current-password">
                 </div>
 
-                <a href="login.html" id="mdpzap">Mot de passe oublié ?</a>
+                <a href="login.php" id="mdpzap">Mot de passe oublié ?</a>
 
                 <button type="submit" class="btn-connexion">Connexion</button>
 
@@ -48,7 +46,7 @@
                 </button>
 
                 <p id="create2">
-                    Pas de compte ? <a href="register.html" id="create">Je m'inscris</a>
+                    Pas de compte ? <a href="register.php" id="create">Je m'inscris</a>
                 </p>
             </form>
         </div>

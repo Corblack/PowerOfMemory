@@ -1,30 +1,35 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/scores.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <?php
+    $title = "Scores";
+    ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/ProjetFlash/partials/head.php'; ?>
+    <link rel="stylesheet" href="/ProjetFlash/assets/css/scores.css">
 </head>
 <body>
 
 
     <main>
-        <header>
-        <div class="header-container">
-            <p><img src="assets/images/logo.png" alt="logo"></p>
-            <nav class="menu">
-                <a href="index.html">Accueil</a>
-                <a href="scores.html">Scores</a>
-                <a href="account.html" id="moncompte">Profil</a>
-                <a href="contact.html" id="contact">Nous contacter</a>
-            </nav>
-        </div>
-        </header>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/ProjetFlash/partials/header.php' ?>
 
         <div class="texte"> <h1>Scores</h1>
             <p>Voici la listes des meilleurs joueurs, vient donc battre tous ces records!</p>
+        </div>
+        <div class=" filter">
+            <form method="post" action="scores.php">
+                <div class="filtre nom">
+                    <label for="pseudo">pseudo:</label>
+                    <input type="text" id="pseudo" name="pseudo">
+                </div>
+                <div class="filtre jeu">
+                    <label for="jeu">jeu:</label>
+                    <input type="text" id="jeu" name="jeu">
+                </div>
+                <div class="valid">
+                    <button type="submit">Filtrer</button>
+                </div>
+            </form>
         </div>
 
         <div class="tableau">
@@ -41,6 +46,11 @@
             </thead>
             
                 <tbody>
+                <?php
+                while ($score = $requete_scores->fetch(PDO::FETCH_ASSOC)) {
+             
+                }
+                ?>
                 <tr>
                     <td>1</td> 
                     
@@ -159,32 +169,7 @@
     
     <img src="asset/image/e77e3023-2610-44e4-8a36-dc4f92b357b4.png" alt="Manette de jeu" id="manette-img">
 </div>
-  <footer>
-        <div class="footer-top">
-            <div class="footer1">
-                <p> <img src="assets/images/logo.png" alt="logo" id="logo"></p>
-                <p>Notre équipe est à votre écoute pour toute question<br> ou suggestion. Nous mettons tout en
-                    œuvre pour<br> vous aider rapidement.</p>
-            </div>
-            <div class="footer2">
-                <h4>Menu</h4>
-                <a href="index.html">Accueil</a>
-                <a href="scores.html">Scores</a>
-                <a href="contact.html">contact</a>
-            </div>
-            <div class="footer3">
-                <h4>Contactez-nous</h4>
-                <p>+33 6 01 02 03 04</p>
-                <p>23 rue de Paris<br>75002 Paris</p>
-                <p>contact@web.com</p>
-            </div>
-            <p><img src="assets/images/Group 12.png" alt="reseaux" id="reseaux"></p>
-        </div>
-        <hr>
-        <div class="footer-bottom">
-            <p>© 2025 The Power of Memory. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include '../partials/footer.php'; ?>
 
     </main>
 

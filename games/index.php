@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeux</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/game.css" />
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <?php 
+    $title = "The Power Of Memory";
+    ?>
+    <link rel="stylesheet" href="assets/css/game.css">
+    <?php include 'partials/head.php'; ?>
   </head>
   <body>
-    <header>
-        <div class="header-container">
-            <p><img src="assets/images/logo.png" alt="logo"></p>
-            <nav class="menu">
-                <a href="index.html">Accueil</a>
-                <a href="scores.html">Scores</a>
-                <a href="account.html" id="moncompte">Profil</a>
-                <a href="contact.html" id="contact">Nous contacter</a>
-            </nav>
-        </div>
-    </header>
+    <?php include 'partials/header.php'; ?>
     <!-- Titre du Jeu -->
 
     <div class="blocmemory">
@@ -122,31 +107,7 @@
       </form>
     </div>
 
-    <footer>
-        <div class="footer-top">
-            <div class="footer1">
-                <p> <img src="assets/images/logo.png" alt="logo" id="logo"></p>
-                <p>Notre équipe est à votre écoute pour toute question<br> ou suggestion. Nous mettons tout en œuvre pour<br> vous aider rapidement.</p>
-            </div>
-            <div class="footer2">
-                <h4>menu</h4>
-                <a href="index.html">Accueil</a>
-                <a href="scores.html">Scores</a>
-                <a href="contact.html">contact</a>
-            </div>
-            <div class="footer3">
-                <h4>Contactez-nous</h4>
-                <p>+33 6 01 02 03 04</p>
-                <p>23 rue de Paris<br>75002 Paris</p>
-                <p>contact@web.com</p>
-            </div>
-            <p><img src="assets/images/Group 12.png" alt="reseaux" id="reseaux"></p>
-        </div>
-        <hr>
-        <div class="footer-bottom">
-            <p>© 2025 The Power of Memory. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include 'partials/footer.php'; ?>
 
     <script>
       function openForm() {
