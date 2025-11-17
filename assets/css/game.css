@@ -24,10 +24,9 @@ body {
 
   /* On fixe le nombre de colonnes au lieu de auto-fit pour éviter l’étirement */
   grid-template-columns: repeat(auto-fill, 100px);
-  width: max-content;       /* largeur de la grille = largeur nécessaire pour les cellules */
+  width: max-content;     
 }
 
-/* Chaque cellule : carré parfait */
 .cell {
   width: 100px;
   height: 100px;
@@ -37,19 +36,19 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #222;
-  flex-shrink: 0;           /* empêche la cellule de rétrécir */
+  flex-shrink: 0;           
 }
 
-/* Image à l’intérieur du carré */
+
 .cell img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* garde le carré sans déformer l’image */
+  object-fit: cover;        
   border-radius: 8px;
   display: block;
 }
 
-/* reste du CSS inchangé */
+
 .rouleau {
   gap: 60px;
   margin: auto;
