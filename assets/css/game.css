@@ -3,23 +3,53 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.grille {
+/* Timer */
+#timerContainer p {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  text-align: start;
+}
+
+/* Grille principale */
+.grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  max-width: 640px;
-  margin: auto;
+  gap: 12px;
+  justify-content: center; /* centre la grille */
+  margin: 20px auto;
+
+  /* On fixe le nombre de colonnes au lieu de auto-fit pour éviter l’étirement */
+  grid-template-columns: repeat(auto-fill, 100px);
+  width: max-content;       /* largeur de la grille = largeur nécessaire pour les cellules */
 }
 
-.grille img {
+/* Chaque cellule : carré parfait */
+.cell {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  flex-shrink: 0;           /* empêche la cellule de rétrécir */
+}
+
+/* Image à l’intérieur du carré */
+.cell img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;        /* garde le carré sans déformer l’image */
+  border-radius: 8px;
   display: block;
-  margin: 10px;
 }
 
+/* reste du CSS inchangé */
 .rouleau {
   gap: 60px;
   margin: auto;
@@ -76,7 +106,6 @@ select {
   width: 280px;
 }
 
-/* The popup chat - hidden by default */
 .chat-popup {
   display: none;
   position: fixed;
@@ -87,14 +116,12 @@ select {
   color: black;
 }
 
-/* Add styles to the form container */
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width textarea */
 .form-container textarea {
   width: 100%;
   padding: 15px;
@@ -105,13 +132,12 @@ select {
   min-height: 200px;
   box-sizing: border-box;
 }
-/* When the textarea gets focus, do something */
+
 .form-container textarea:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
   background-color: #04aa6d;
   color: white;
@@ -123,12 +149,10 @@ select {
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
